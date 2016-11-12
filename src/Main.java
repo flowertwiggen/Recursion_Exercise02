@@ -11,10 +11,9 @@ public class Main {
         String input = JOptionPane.showInputDialog("Skriv in en text och testa om det är ett Palindrom:");
 
         Palindrom test = new Palindrom();
-        //test.checkText(input);
 
 
-        if(test.checkText(input) == true)
+        if(test.checkText(input.trim().toLowerCase(), 0, input.length()-1) == true)
             JOptionPane.showMessageDialog(null, "Ja, \"" + input + "\" är ett Palindrom");
         else
             JOptionPane.showMessageDialog(null, "Nej, \"" + input + "\" är inte ett Palindrom");
@@ -22,3 +21,5 @@ public class Main {
     }
 
 }
+
+
